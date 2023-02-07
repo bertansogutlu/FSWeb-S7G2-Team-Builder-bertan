@@ -5,15 +5,18 @@ import { datalar } from "./datalar";
 
 function App() {
 
-  const [data, setData] = useState([...datalar])
+  const [data, setData] = useState(datalar);
+  const [person, setPerson] = useState({});
 
   function datasaver(event) {
-    setData( [...data, {[event.target.name]: event.target.value }])
-    console.log(data)
+    setPerson({...person,[event.target.name]: event.target.value})
+    console.log(person)
   }
 
-  function submit() {
-
+  function submit(event) {
+  event.preventDefault();
+  setData([...data, person])
+  console.log(data)
   }
 
   return (

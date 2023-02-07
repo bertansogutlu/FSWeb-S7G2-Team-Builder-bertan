@@ -5,6 +5,7 @@ export default function Form({datasaver, submit}) {
 
     return (
         <form onSubmit={submit}>
+            
             <label>Isim:
             <input type="text" name="isim" onChange={datasaver}/>
             </label>
@@ -16,11 +17,10 @@ export default function Form({datasaver, submit}) {
             
 
             <label>Rol:
-            <input type="text" name="rol" onChange={datasaver} />
+            <input type="text" name="rol" onChange={datasaver}/>
             </label>
             
-            
-            <input type="submit" value="Submit" />
+            <button type="submit">KAYDET</button>
         </form>
     )
 }
