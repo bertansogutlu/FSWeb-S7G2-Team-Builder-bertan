@@ -9,7 +9,6 @@ function App() {
   const [person, setPerson] = useState({});
 
   function datasaver(event) {
-    event.preventDefault();
     setPerson({ ...person, [event.target.name]: event.target.value })
     console.log(person)
   }
