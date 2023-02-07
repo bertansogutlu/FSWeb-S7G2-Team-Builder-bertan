@@ -9,19 +9,20 @@ function App() {
   const [person, setPerson] = useState({});
 
   function datasaver(event) {
-    setPerson({...person,[event.target.name]: event.target.value})
+    event.preventDefault();
+    setPerson({ ...person, [event.target.name]: event.target.value })
     console.log(person)
   }
 
   function submit(event) {
-  event.preventDefault();
-  setData([...data, person])
-  console.log(data)
+    event.preventDefault();
+    setData([...data, person])
+    console.log(data)
   }
 
   return (
     <div className="App">
-    <Form datasaver={datasaver} submit={submit}/>
+      <Form datasaver={datasaver} submit={submit} />
     </div>
   );
 }
