@@ -12,9 +12,13 @@ function App() {
     console.log(data)
   }
 
+  function submit() {
+
+  }
+
   return (
     <div className="App">
-    <Form datasaver={datasaver}/>
+    <Form datasaver={datasaver} submit={submit}/>
     </div>
   );
 }
