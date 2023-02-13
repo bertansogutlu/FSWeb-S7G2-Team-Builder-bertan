@@ -2,6 +2,7 @@ import './App.css';
 import Form from './Form';
 import { useState } from "react";
 import { datalar } from "./datalar";
+import Liste from './Liste';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <Form datasaver={datasaver} submit={submit} />
+      <Liste data={data}/>
     </div>
   );
 }
